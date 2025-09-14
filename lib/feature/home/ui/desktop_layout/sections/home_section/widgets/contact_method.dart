@@ -16,10 +16,10 @@ class ContactMethod extends StatelessWidget {
         Row(
           spacing: 10,
           children: [
-            SocialWidget(image:'assets/icons8-facebook-logo.svg', ),
-            SocialWidget(image:'assets/linkedin_logo.svg' ),
-            SocialWidget(image:'assets/github_logo.svg'),
-            SocialWidget(image: 'assets/gmail_logo.svg',)
+            SocialWidget(image:'assets/icons8-facebook-logo.svg', link: 'https://www.facebook.com/share/1EukHpGU2c/',),
+            SocialWidget(image:'assets/linkedin_logo.svg',link: 'https://www.linkedin.com/in/bola-rafaat-b61a97264', ),
+            SocialWidget(image:'assets/github_logo.svg',link: 'https://github.com/bodeal5ofas',),
+            SocialWidget(image: 'assets/gmail_logo.svg',link: 'mailto:bolaraafat2003@gmail.com?subject=Hello%20Bola&body=I%20want%20to%20connect%20with%20you',)
         
           ],
         ),
@@ -42,6 +42,7 @@ class ContactMethod extends StatelessWidget {
                 padding: const EdgeInsets.all(10.0),
                 child: Text("Download CV",style: AppStyles.semiBold16.copyWith(color: Colors.white),),
               ),),
+
               ElevatedButton(onPressed: (){}, 
               style: ElevatedButton.styleFrom(backgroundColor: AppColors.secondaryColor,
               side:BorderSide(color: AppColors.primaryColor),

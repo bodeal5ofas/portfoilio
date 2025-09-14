@@ -4,6 +4,7 @@ import 'package:portfolio/core/utils/app_styles.dart';
 import 'package:portfolio/feature/home/ui/desktop_layout/sections/about_section/about_section_desk.dart';
 import 'package:portfolio/feature/home/ui/desktop_layout/sections/home_section/home_section_desk.dart';
 import 'package:portfolio/feature/home/ui/desktop_layout/sections/home_section/widgets/appbar_desk.dart';
+import 'package:portfolio/feature/home/ui/desktop_layout/sections/projects_section/projects_section.dart';
 import 'package:portfolio/feature/home/ui/desktop_layout/sections/service_section/service_section.dart';
 import 'package:portfolio/feature/home/ui/desktop_layout/sections/skills_section.dart/skills_section_desk.dart';
 
@@ -23,6 +24,7 @@ class DesktopScreen extends StatelessWidget {
           AboutSectionDesk(),
           SkillsSectionDesk(),
           ServiceSection(),
+          ProjectsSection(),
         ],),
       )
       //  CustomScrollView(
