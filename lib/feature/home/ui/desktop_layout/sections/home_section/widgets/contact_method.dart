@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/core/utils/app_colors.dart';
 import 'package:portfolio/core/utils/app_styles.dart';
 import 'package:portfolio/feature/home/ui/desktop_layout/sections/home_section/widgets/social_widget.dart';
-import 'package:svg_flutter/svg.dart';
+//import 'package:svg_flutter/svg.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ContactMethod extends StatelessWidget {
@@ -16,10 +16,10 @@ class ContactMethod extends StatelessWidget {
         Row(
           spacing: 10,
           children: [
-            SocialWidget(image:SvgPicture.asset('assets/icons8-facebook-logo.svg',fit: BoxFit.fill,) ),
-            //SocialWidget(image:SvgPicture.asset('assets/icons8-linkedin.svg',fit: BoxFit.fill,) ),
-            SocialWidget(image:Image.asset('assets/git_hub_logo.png')),//'assets/git_hub_logo.png'),
-            SocialWidget(image:SvgPicture.asset( 'assets/icons8-gmail.svg',fit: BoxFit.fill,)),
+            SocialWidget(image:'assets/icons8-facebook-logo.svg', ),
+            SocialWidget(image:'assets/linkedin_logo.svg' ),
+            SocialWidget(image:'assets/github_logo.svg'),
+            SocialWidget(image: 'assets/gmail_logo.svg',)
         
           ],
         ),
@@ -40,7 +40,7 @@ class ContactMethod extends StatelessWidget {
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30),),),
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
-                child: Text("Download CV",style: AppStyles.semiBold16.copyWith(color: Colors.black),),
+                child: Text("Download CV",style: AppStyles.semiBold16.copyWith(color: Colors.white),),
               ),),
               ElevatedButton(onPressed: (){}, 
               style: ElevatedButton.styleFrom(backgroundColor: AppColors.secondaryColor,
@@ -50,14 +50,15 @@ class ContactMethod extends StatelessWidget {
               ),
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
-                child: Text("portfolio",style: AppStyles.semiBold16.copyWith(color: AppColors.primaryColor),),
+                child: Text("Hire Me",style: AppStyles.semiBold16.copyWith(color: AppColors.primaryColor),),
               ),),  
             ],
         )
-         , ElevatedButton(onPressed: (){}, 
-         style: ElevatedButton.styleFrom(backgroundColor: AppColors.primaryColor,), 
-         child: Text("Hire Me",style: AppStyles.regular12.copyWith(color: Colors.white),)
-         )
+         ,
+        //   ElevatedButton(onPressed: (){}, 
+        //  style: ElevatedButton.styleFrom(backgroundColor: AppColors.primaryColor,), 
+        //  child: Text("Hire Me",style: AppStyles.regular12.copyWith(color: Colors.white),)
+        //  )
       ],
     );
   }

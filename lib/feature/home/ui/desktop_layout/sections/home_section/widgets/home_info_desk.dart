@@ -46,7 +46,7 @@ class HomeInfoDesk extends StatelessWidget {
         child: Padding(padding: EdgeInsetsGeometry.all(10),
         child:Text('I’m a passionate Junior Flutter Developer with strong proficiency in Dart, Firebase, and MVVM architecture. I build cross-platform mobile apps with clean code, responsive UI, and real-time capabilities. I’m committed to continuous learning and thrive in collaborative environments where I can contribute to impactful solutions. My goal is to create intuitive, scalable, and performance-driven mobile applications.',
         style: AppStyles.regular12.copyWith(color: AppColors.lightGreyColor),
-
+  
         ) ,),
       ),
     ],);

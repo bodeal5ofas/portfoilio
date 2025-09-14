@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/feature/home/ui/desktop_layout/sections/home_section/widgets/animated_image.dart';
-import 'package:portfolio/feature/home/ui/desktop_layout/sections/home_section/widgets/appbar_desk.dart';
+//import 'package:portfolio/feature/home/ui/desktop_layout/sections/home_section/widgets/appbar_desk.dart';
 import 'package:portfolio/feature/home/ui/desktop_layout/sections/home_section/widgets/contact_method.dart';
 import 'package:portfolio/feature/home/ui/desktop_layout/sections/home_section/widgets/home_info_desk.dart';
 

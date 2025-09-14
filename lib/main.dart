@@ -17,6 +17,7 @@ class Portfolio extends StatelessWidget {
   //  double layoutWidth=MediaQuery.sizeOf(context).width;
       AppStyles.initContext(context);
     return MaterialApp(
+      
       debugShowCheckedModeBanner: false,
       home: SafeArea(
         child: LayoutBuilder(
