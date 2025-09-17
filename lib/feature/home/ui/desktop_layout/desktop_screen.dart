@@ -37,3 +37,23 @@ class DesktopScreen extends StatelessWidget {
     
   }
 }
+
+
+
+// مثال باستخدام Scroll للـ Sections:
+
+// final itemScrollController = ItemScrollController();
+
+// ScrollablePositionedList.builder(
+//   itemScrollController: itemScrollController,
+//   itemCount: sections.length,
+//   itemBuilder: (context, index) => sections[index],
+// );
+
+
+// وبعدين أي زرار تضغطه يعمل:
+
+// itemScrollController.scrollTo(
+//   index: 2, // يروح Section رقم 2
+//   duration: Duration(seconds: 1),
+// );

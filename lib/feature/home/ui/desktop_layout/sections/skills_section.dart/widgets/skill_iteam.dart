@@ -1,7 +1,7 @@
 //import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/utils/app_styles.dart';
-import 'package:portfolio/feature/home/models/skill_model.dart';
+import 'package:portfolio/feature/home/ui/desktop_layout/sections/skills_section.dart/models/skill_model.dart';
 import 'package:svg_flutter/svg.dart';
 
 class SkillIteam extends StatelessWidget {

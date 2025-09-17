@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:portfolio/core/widgets/section_name.dart';
-import 'package:portfolio/feature/home/models/skill_model.dart';
+import 'package:portfolio/feature/home/ui/desktop_layout/sections/skills_section.dart/models/skill_model.dart';
 import 'package:portfolio/feature/home/ui/desktop_layout/sections/skills_section.dart/widgets/skill_iteam.dart';
 
 class SkillsSectionDesk extends StatelessWidget {
@@ -20,19 +20,26 @@ final List<SkillModel> skills=const [
     // SizedBox(
     //   height: MediaQuery.sizeOf(context).height*0.5,
     //   child: 
-      Column(spacing: 20,children: [
-        SectionName(firstnane: 'My', secondname: "Skills",),
-        GridView.builder(
-          itemCount: skills.length,
-          shrinkWrap: true,
-          physics: NeverScrollableScrollPhysics(),
+      // SizedBox(height: MediaQuery.sizeOf(context).height,
+      //   child:
+         Column(spacing: 20,children: [
+          SectionName(firstnane: 'My', secondname: "Skills",),
+          SizedBox(
+           height: MediaQuery.sizeOf(context).height*0.5,
+            child: GridView.builder(
+              itemCount: skills.length,
               
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 3,
-            crossAxisSpacing: 10,
-            mainAxisSpacing: 10,
-           ),
-            itemBuilder: (context, index) => SkillIteam(skillModel: skills[index],),),
-      ],);
+              // shrinkWrap: true,
+            physics: NeverScrollableScrollPhysics(),
+                  
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                childAspectRatio: 3,
+                crossAxisCount: 3,
+                crossAxisSpacing: 10,
+                mainAxisSpacing: 10,
+               ),
+                itemBuilder: (context, index) => SkillIteam(skillModel: skills[index],),),
+          ),
+        ],);
   }
 }

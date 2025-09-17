@@ -8,14 +8,16 @@ class AboutSectionDesk extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-       SectionName(firstnane: "About ", secondname: 'Me'),
-        //  Divider(color: AppColors.primaryColor,thickness: 2,
-        // indent: MediaQuery.sizeOf(context).width*0.46,
-        // endIndent: MediaQuery.sizeOf(context).width*0.46,
-        // ),
-      ],
+    return SizedBox(height: MediaQuery.sizeOf(context).height,
+      child: Column(
+        children: [
+         SectionName(firstnane: "About ", secondname: 'Me'),
+          //  Divider(color: AppColors.primaryColor,thickness: 2,
+          // indent: MediaQuery.sizeOf(context).width*0.46,
+          // endIndent: MediaQuery.sizeOf(context).width*0.46,
+          // ),
+        ],
+      ),
     );
   }
 }
