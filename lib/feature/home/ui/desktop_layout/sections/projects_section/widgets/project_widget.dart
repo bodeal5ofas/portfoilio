@@ -1,5 +1,6 @@
 //import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:portfolio/core/helper/lanch_url_func.dart';
 import 'package:portfolio/core/utils/app_colors.dart';
 import 'package:portfolio/core/utils/app_styles.dart';
 import 'package:portfolio/feature/home/ui/desktop_layout/sections/projects_section/models/project_model.dart';
@@ -21,18 +22,34 @@ final ProjectModel projectModel;
       ),
       child:  Align(
           alignment: Alignment.bottomCenter,
-          child: Row(
+          child: projectModel.gitHubLink==null? ElevatedButton(onPressed: ()async{
+                //linkedin
+                await launchUrlFunc(projectModel.linkedinLink);
+                
+              },
+              style: ElevatedButton.styleFrom(backgroundColor: AppColors.secondaryColor,
+              side:BorderSide(color: AppColors.primaryColor),
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30),),
+              
+              ),
+              child: Text("Watch Video",style: AppStyles.semiBold16.copyWith(color: AppColors.primaryColor,fontSize: 14),),)
+      
+          : Row(
             spacing: 10,
             children: [
-              ElevatedButton(onPressed: (){
+              ElevatedButton(onPressed: ()async{
                 //github
+                await launchUrlFunc(projectModel.gitHubLink!);
+                
               },
               style: ElevatedButton.styleFrom(backgroundColor: AppColors.primaryColor,),
                child: Text('View Project',style: AppStyles.semiBold16.copyWith(color: Colors.white,fontSize: 14),),
                ),
-               ElevatedButton(onPressed: (){
+               ElevatedButton(onPressed: ()async{
                 //linkedin
-               }, 
+                await launchUrlFunc(projectModel.linkedinLink);
+                
+              },
               style: ElevatedButton.styleFrom(backgroundColor: AppColors.secondaryColor,
               side:BorderSide(color: AppColors.primaryColor),
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30),),
@@ -69,3 +86,4 @@ final ProjectModel projectModel;
     );
   }
 }
+

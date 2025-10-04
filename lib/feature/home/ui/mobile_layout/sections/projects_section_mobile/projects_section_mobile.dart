@@ -3,9 +3,9 @@ import 'package:portfolio/core/widgets/section_name.dart';
 import 'package:portfolio/feature/home/ui/desktop_layout/sections/projects_section/models/project_model.dart';
 import 'package:portfolio/feature/home/ui/desktop_layout/sections/projects_section/widgets/project_widget.dart';
 
-class ProjectsSection extends StatelessWidget {
-  const ProjectsSection({super.key});
-final List<ProjectModel> projects=const [
+class ProjectsSectionMobile extends StatelessWidget {
+  const ProjectsSectionMobile({super.key});
+  final List<ProjectModel> projects=const [
   // ProjectModel(title: 'Planet App', 
   // image: 'image',
   //  gitHubLink: 'gitHubLink',
@@ -54,33 +54,37 @@ final List<ProjectModel> projects=const [
              linkedinLink: 'https://www.linkedin.com/posts/bola-rafaat-b61a97264_flutter-ui-flutterabrdeveloper-activity-7258191708293632000-d9eX?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEDxxrkBQAlXBo_iW3QLD4bT0zo172HCFGk',
              ),
       ];
+
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: [
-      SectionName(firstnane: 'My', secondname: 'Projects',),
-      SizedBox(height: 20,),
-      // SizedBox(
-      //   height: MediaQuery.sizeOf(context).height*0.6,
-      //   child: ListView.builder(
-          
-      //     itemCount: projects.length,
-      //     //itemCount: projects.length,
-      //   scrollDirection: Axis.horizontal,
-      //   itemBuilder: (context, index) => Padding(
-      //     padding: EdgeInsets.symmetric(horizontal: 40,vertical: 10),
-      //     child: ProjectWidget(projectModel: projects[index],)),),
-      // )
-      Expanded(child: GridView.builder(
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3,crossAxisSpacing: 10,mainAxisSpacing: 10, ),
-        itemCount: projects.length,
-        itemBuilder: (context, index) => Padding(
-          padding: EdgeInsets.symmetric(horizontal: 40,vertical: 10),
-          child: ProjectWidget(projectModel: projects[index],),)
-          ,),
-      ),
-      
-    ],);
+    return Expanded(
+      child: Column(
+      //  crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+        SectionName(firstnane: 'My', secondname: 'Projects',divider: 0.4,),
+        SizedBox(height: 20,),
+        // SizedBox(
+        //   height: MediaQuery.sizeOf(context).height*0.6,
+        //   child: ListView.builder(
+            
+        //     itemCount: projects.length,
+        //     //itemCount: projects.length,
+        //   scrollDirection: Axis.horizontal,
+        //   itemBuilder: (context, index) => Padding(
+        //     padding: EdgeInsets.symmetric(horizontal: 40,vertical: 10),
+        //     child: ProjectWidget(projectModel: projects[index],)),),
+        // )
+        Expanded(child: ListView.builder(
+          itemCount: projects.length,
+          itemBuilder: (context, index) => Padding(
+            padding: EdgeInsets.symmetric(horizontal: 24,vertical: 16),
+           child: 
+            SizedBox(height:MediaQuery.sizeOf(context).height*0.4,
+            child: ProjectWidget(projectModel: projects[index],)),)
+            ,),),
+        
+        
+      ],),
+    );
   }
 }

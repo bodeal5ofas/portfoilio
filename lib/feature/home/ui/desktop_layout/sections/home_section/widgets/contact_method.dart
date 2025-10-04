@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/core/utils/app_colors.dart';
 import 'package:portfolio/core/utils/app_styles.dart';
 import 'package:portfolio/feature/home/ui/desktop_layout/sections/home_section/widgets/social_widget.dart';
+import 'package:portfolio/feature/home/ui/desktop_layout/view_model/cubit/desk_provider.dart';
+import 'package:provider/provider.dart';
 //import 'package:svg_flutter/svg.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -14,6 +16,7 @@ class ContactMethod extends StatelessWidget {
       spacing: 20,
       children: [
         Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           spacing: 10,
           children: [
             SocialWidget(image:'assets/icons8-facebook-logo.svg', link: 'https://www.facebook.com/share/1EukHpGU2c/',),
@@ -24,6 +27,7 @@ class ContactMethod extends StatelessWidget {
           ],
         ),
         Row(
+           mainAxisAlignment: MainAxisAlignment.center,
             spacing: 10,
             children: [
             
@@ -43,7 +47,9 @@ class ContactMethod extends StatelessWidget {
                 child: Text("Download CV",style: AppStyles.semiBold16.copyWith(color: Colors.white),),
               ),),
 
-              ElevatedButton(onPressed: (){}, 
+              ElevatedButton(onPressed: (){
+                context.read<DeskProvider>().setCurrentIndex(5);
+              }, 
               style: ElevatedButton.styleFrom(backgroundColor: AppColors.secondaryColor,
               side:BorderSide(color: AppColors.primaryColor),
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30),),

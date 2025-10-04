@@ -17,7 +17,7 @@ class HomeInfoDesk extends StatelessWidget {
         child: AnimatedTextKit(
           animatedTexts: [
             TypewriterAnimatedText(
-              'And I''m  Flutter Developer',
+              "And I'm  Flutter Developer",
               speed: Duration(milliseconds: 100), // سرعة الكتابة
             ),
           ],
