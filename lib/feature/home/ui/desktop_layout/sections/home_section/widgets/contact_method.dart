@@ -23,7 +23,6 @@ class ContactMethod extends StatelessWidget {
             SocialWidget(image:'assets/linkedin_logo.svg',link: 'https://www.linkedin.com/in/bola-rafaat-b61a97264', ),
             SocialWidget(image:'assets/github_logo.svg',link: 'https://github.com/bodeal5ofas',),
             SocialWidget(image: 'assets/gmail_logo.svg',link: 'mailto:bolaraafat2003@gmail.com?subject=Hello%20Bola&body=I%20want%20to%20connect%20with%20you',)
-        
           ],
         ),
         Row(
